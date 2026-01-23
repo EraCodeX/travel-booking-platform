@@ -36,7 +36,6 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 ---
 
 ## ✨ Key Features
-## ✨ Key Features
 
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
 
