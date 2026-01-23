@@ -74,14 +74,28 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 
 ---
 
-## 📸 Screenshots
-<div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-  <img src="./screenshots/homepage.png" alt="Homepage" style="width:300px; border-radius:8px;">
-  <img src="./screenshots/destinations.png" alt="Destinations" style="width:300px; border-radius:8px;">
-  <img src="./screenshots/flight-search.gif" alt="Flight Search GIF" style="width:300px; border-radius:8px;">
-  <img src="./screenshots/mobile-view.png" alt="Mobile Responsive" style="width:300px; border-radius:8px;">
-</div>
+<h2>🖼 Screenshots</h2>
 
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 700px; margin: auto;">
+
+  <!-- Row 1: 2 images -->
+  <figure style="flex: 0 0 48%; text-align: center;">
+    <img src="assets/homepage.png" alt="Homepage"
+         style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
+  </figure>
+
+  <figure style="flex: 0 0 48%; text-align: center;">
+    <img src="assets/destinations.png" alt="Comments Section"
+         style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
+  </figure>
+
+  <!-- Row 2: 1 image -->
+  <figure style="flex: 0 0 100%; text-align: center; margin-top: 1rem;">
+    <img src="assets/mobile-menu.png" alt="Tests Section"
+         style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
+  </figure>
+
+</div>
 ---
 
 ## 🗂 Project Structure
