@@ -91,7 +91,7 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 
   <!-- Row 2: 1 image -->
   <figure style="flex: 0 0 100%; text-align: center; margin-top: 1rem;">
-    <img src="assets/mobile-menu.png" alt="Tests Section"
+    <img src="assets/mobile-view.png" alt="Tests Section"
          style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
   </figure>
 
