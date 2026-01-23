@@ -58,22 +58,27 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 ---
 
 ## 🗂 Project Structure
-eratravel/
+<pre>
+🌍 eratravel/
+│
 ├─ public/
-│ ├─ index.html
-│ └─ favicon.ico
+│   ├─ index.html
+│   └─ favicon.ico
+│
 ├─ src/
-│ ├─ assets/
-│ ├─ components/
-│ ├─ pages/
-│ ├─ services/
-│ ├─ App.js
-│ ├─ index.js
-│ └─ styles.css
+│   ├─ assets/       🖼 Images & icons
+│   ├─ components/   🧩 Reusable UI components
+│   ├─ pages/        🏠 Home, Flight Search, Destinations
+│   ├─ services/     ⚡ API calls with Axios
+│   ├─ App.js
+│   ├─ index.js
+│   └─ styles.css
+│
 ├─ .gitignore
 ├─ package.json
 ├─ package-lock.json
 └─ README.md
+</pre>
 
 ---
 
