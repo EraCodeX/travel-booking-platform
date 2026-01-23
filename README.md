@@ -36,14 +36,42 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 ---
 
 ## ✨ Key Features
-<div>
-- 🔹 <strong>Flight Search & Booking</strong> – Real-time offers via Amadeus API  
-- 🔹 <strong>Google Sign-In Authentication</strong>  
-- 🔹 <strong>Interactive Destination Cards & Carousels</strong>  
-- 🔹 <strong>Responsive & Modern UI/UX</strong>  
-- 🔹 <strong>Image Galleries & GIF Animations</strong>  
-- 🔹 <strong>Mobile-first design</strong>
+## ✨ Key Features
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+
+  <div style="background:#e0e7ff; color:#1e3a8a; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    🔹 <strong>Flight Search & Booking</strong><br>
+    Real-time offers via Amadeus API
+  </div>
+
+  <div style="background:#fde68a; color:#78350f; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    🔹 <strong>Google Sign-In</strong><br>
+    Secure Authentication
+  </div>
+
+  <div style="background:#fbcfe8; color:#831843; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    🔹 <strong>Destination Cards</strong><br>
+    Interactive & Visual
+  </div>
+
+  <div style="background:#bbf7d0; color:#065f46; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    🔹 <strong>Responsive UI</strong><br>
+    Works on all devices
+  </div>
+
+  <div style="background:#c7d2fe; color:#1e3a8a; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    🔹 <strong>Image Galleries</strong><br>
+    Engaging visuals
+  </div>
+
+  <div style="background:#fee2e2; color:#991b1b; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    🔹 <strong>Mobile-first design</strong><br>
+    Optimized for phones
+  </div>
+
 </div>
+
 
 ---
 
