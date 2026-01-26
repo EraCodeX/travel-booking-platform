@@ -125,8 +125,8 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 
 ## ⚡ Getting Started
 ```
-git clone https://github.com/EraCodeX/eratravel.git
-cd eratravel
+git clone https://github.com/EraCodeX/travel-booking-platform.git
+cd travel-booking-platform
 npm install
 npm start
 🌐 Deployment
