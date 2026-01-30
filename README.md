@@ -129,11 +129,7 @@ git clone https://github.com/EraCodeX/travel-booking-platform.git
 cd travel-booking-platform
 npm install
 npm start
-🌐 Deployment
 
-npm install --save gh-pages
-# add homepage and scripts in package.json
-npm run deploy
 
 👩‍💻 Author
 Era Hidaj – Frontend Engineer
