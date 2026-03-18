@@ -82,18 +82,18 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 
   <!-- Row 1: 2 images -->
   <figure style="flex: 0 0 48%; text-align: center;">
-    <img src="assets/image1.png" alt="Image"
+    <img src="assets/booking-search-desktop.png" alt="Booking search desktop view"
          style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
   </figure>
 
   <figure style="flex: 0 0 48%; text-align: center;">
-    <img src="assets/image2.png" alt="Image2"
+    <img src="assets/booking-search-form-ui.png" alt="Booking search form UI"
          style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
   </figure>
 
   <!-- Row 2: 1 image -->
   <figure style="flex: 0 0 100%; text-align: center; margin-top: 1rem;">
-    <img src="assets/mobile-view.png" alt="Image3"
+    <img src="assets/booking-search-mobile.png" alt="Booking search mobile view"
          style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
   </figure>
 
