@@ -3,137 +3,128 @@
 <div align="center">
   <strong>Responsive Travel Booking Platform</strong>
   <br><br>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React">
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
-  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge" alt="Axios">
-  <img src="https://img.shields.io/badge/Amadeus%20API-007ACC?style=for-the-badge" alt="Amadeus API">
-  <img src="https://img.shields.io/badge/Google%20Sign--In-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Sign-In">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
+  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Amadeus%20API-007ACC?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Google%20Sign--In-4285F4?style=for-the-badge&logo=google&logoColor=white" />
 </div>
 
 ---
 
-## 🚀 Overview
+## 🌐 Live Demo
 
-<div>
-EraTravel is a <strong>modern, responsive travel booking platform</strong> built with <strong>React</strong>.  
-Users can explore destinations, book flights, and enjoy interactive galleries.  
-The app emphasizes <strong>performance, accessibility, and enterprise-level design standards</strong>.
+👉 [🚀 View Live Project](https://your-live-link.com)
+
+---
+
+## Overview
+
+EraTravel is a modern and responsive travel booking platform built with React.  
+It allows users to explore destinations, search for flights, and interact with a clean booking interface designed for both desktop and mobile experiences.
+
+The project focuses on:
+
+- responsive UI implementation
+- reusable component structure
+- third-party API integration
+- clean user experience
+
+---
+
+## Highlights
+
+- Built reusable and scalable React components
+- Integrated real-time flight data using external APIs
+- Designed responsive UI for both desktop and mobile
+- Improved search experience with clean UX patterns
+
+---
+
+## Key Features
+
+- Flight Search & Booking using Amadeus API
+- Google Sign-In Authentication
+- Responsive UI across devices
+- Interactive Destination Cards
+- Reusable Components
+
+---
+
+## Tech Stack
+
+- React, Bootstrap 5
+- Axios
+- Amadeus API
+- Google Sign-In
+- React Slick, React Select, Datepicker
+
+---
+
+## Screenshots
+
+<div align="center">
+
+| Desktop                                                     | Form UI                                                     |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="assets/booking-search-desktop.png" width="320" /> | <img src="assets/booking-search-form-ui.png" width="320" /> |
+
+<br/>
+
+| Mobile                                                     |
+| ---------------------------------------------------------- |
+| <img src="assets/booking-search-mobile.png" width="220" /> |
+
 </div>
 
 ---
 
-## 🛠 Technologies & Tools
+## Project Structure
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">React</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">Bootstrap 5</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">Axios</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">Amadeus API</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">React Slick</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">React Select</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">Datepicker</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">Google Sign-In</div>
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">Responsive UI</div>
-</div>
-
----
-
-## ✨ Key Features
-
-<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
-
-  <div style="background:#e0e7ff; color:#1e3a8a; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    🔹 <strong>Flight Search & Booking</strong><br>
-    Real-time offers via Amadeus API
-  </div>
-
-  <div style="background:#fde68a; color:#78350f; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    🔹 <strong>Google Sign-In</strong><br>
-    Secure Authentication
-  </div>
-
-  <div style="background:#fbcfe8; color:#831843; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    🔹 <strong>Destination Cards</strong><br>
-    Interactive & Visual
-  </div>
-
-  <div style="background:#bbf7d0; color:#065f46; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    🔹 <strong>Responsive UI</strong><br>
-    Works on all devices
-  </div>
-
-  <div style="background:#c7d2fe; color:#1e3a8a; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    🔹 <strong>Image Galleries</strong><br>
-    Engaging visuals
-  </div>
-
-  <div style="background:#fee2e2; color:#991b1b; padding:12px; border-radius:10px; flex:0 0 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    🔹 <strong>Mobile-first design</strong><br>
-    Optimized for phones
-  </div>
-
-</div>
-
----
-
-<h2>🖼 Screenshots</h2>
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 700px; margin: auto;">
-
-  <!-- Row 1: 2 images -->
-  <figure style="flex: 0 0 48%; text-align: center;">
-    <img src="assets/booking-search-desktop.png" alt="Booking search desktop view"
-         style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
-  </figure>
-
-  <figure style="flex: 0 0 48%; text-align: center;">
-    <img src="assets/booking-search-form-ui.png" alt="Booking search form UI"
-         style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
-  </figure>
-
-  <!-- Row 2: 1 image -->
-  <figure style="flex: 0 0 100%; text-align: center; margin-top: 1rem;">
-    <img src="assets/booking-search-mobile.png" alt="Booking search mobile view"
-         style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
-  </figure>
-
-## </div>
-
-## 🗂 Project Structure
-
-<pre>
-🌍 eratravel/
-│
-├─ public/
-│   ├─ index.html
-│   └─ favicon.ico
-│
-├─ src/
-│   ├─ assets/       🖼 Images & icons
-│   ├─ components/   🧩 Reusable UI components
-│   ├─ pages/        🏠 Home, Flight Search, Destinations
-│   ├─ services/     ⚡ API calls with Axios
-│   ├─ App.js
-│   ├─ index.js
-│   └─ styles.css
-│
-├─ .gitignore
-├─ package.json
-├─ package-lock.json
-└─ README.md
-</pre>
-
----
-
-## ⚡ Getting Started
-
+```bash
+travel-booking-platform/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── assets/
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md
 ```
+
+---
+
+## Getting Started
+
+```bash
 git clone https://github.com/EraCodeX/travel-booking-platform.git
 cd travel-booking-platform
 npm install
 npm start
-
-
-👩‍💻 Author
-Era Hidaj – Frontend Engineer
 ```
+
+---
+
+## API Integration
+
+- Uses Amadeus API for flight data
+- Google Sign-In for authentication
+
+---
+
+## Future Improvements
+
+- Add hotel booking
+- Improve filters
+- Add favorites
+- Deploy live version
+
+---
+
+## Author
+
+**Era Hidaj**  
+Frontend Engineer
