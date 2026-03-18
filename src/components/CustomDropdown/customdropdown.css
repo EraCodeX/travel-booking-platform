@@ -1,70 +1,173 @@
-/* CostumDropdown */
-.dropdown-custom #dropdown-custom-components {
-    width: 100%;
-    background: none;
-    font-family: var(--fontFamily);
-    text-align: left;
-    padding: 5px 40px 5px 5px;
-    padding-left: 22px !important;
-    border: none;
-    font-size: var(--textFont);
-    position: relative;
-    color: var(--textClr)
+/* =========================
+   CUSTOM DROPDOWN - PREMIUM
+   ========================= */
+
+.city-dropdown-select {
+  width: 100%;
 }
 
-.dropdown-custom #dropdown-custom-components span {
-    font-family: var(--fontFamily) !important;
-    font-weight: bold;
+.city-dropdown-select .city-select__control {
+  min-height: unset !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
-.dropdown-custom #dropdown-custom-components:focus {
-    border: none;
-    outline: unset;
-    box-shadow: none;
+.city-dropdown-select .city-select__value-container {
+  padding: 0 !important;
 }
 
-.dropdown-custom .dropdown-toggle {
-    font-family: bootstrap-icons !important;
-    font-style: normal;
-    font-weight: 400 !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+.city-dropdown-select .city-select__input-container {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.dropdown-custom .dropdown-toggle::before {
-    position: absolute;
-    left: 0px;
-    bottom: 6px;
-    content: "\f52a";
-    font-size: var(--bodyText);
-    color: var(--textclr);
+.city-dropdown-select .city-select__single-value {
+  color: #0f172a !important;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
 }
 
-.dropdown-custom .dropdown-toggle::after {
-    position: absolute;
-    border: none;
-    right: 20px;
-    bottom: 6px;
-    content: "\f282";
-    font-size: var(--bodyText);
-    color: var(--textclr);
-
+.city-dropdown-select .city-select__placeholder {
+  color: #98a2b3 !important;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
-.dropdown-custom .dropdown-menu {
-    width: 100%;
-    padding: 10px;
-    min-width: 12rem;
+.city-dropdown-select .city-select__menu {
+  border-radius: 18px !important;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16) !important;
 }
 
-.dropdown-custom .list-unstyled li a {
-    padding: 10px 8px;
-    padding: 10px;
-    font-weight: 500;
-    transition: all 0.4s ease-out;
+.city-dropdown-select .city-select__menu-list {
+  padding: 8px !important;
 }
 
-.dropdown-custom .list-unstyled li:hover a {
-    font-weight: bold;
+.city-dropdown-select .city-select__option {
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Guests */
+.guest-dropdown-button,
+.guest-dropdown-button .btn-group,
+.guest-dropdown-button .dropdown-toggle,
+#guest-dropdown {
+  width: 100%;
+}
+
+#guest-dropdown {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-height: unset !important;
+  color: #0f172a !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+#guest-dropdown::after {
+  margin-left: 8px;
+  color: #94a3b8;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+#guest-dropdown:hover,
+#guest-dropdown:focus,
+#guest-dropdown:active,
+.show > #guest-dropdown.btn,
+.show > #guest-dropdown.btn-white {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #0f172a !important;
+}
+
+.dropdown-menu {
+  border-radius: 20px !important;
+  padding: 10px !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16) !important;
+  min-width: 280px !important;
+}
+
+.guest-dropdown-item {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 12px !important;
+  border-radius: 14px;
+  transition: background 0.22s ease;
+}
+
+.guest-dropdown-item:hover {
+  background: #f8fafc;
+}
+
+.guest-type-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-type-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.guest-counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.guest-counter-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  border-width: 1px !important;
+}
+
+.guest-counter-value {
+  min-width: 18px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Better alignment inside booking bar */
+.box-search-advance .item-search .city-dropdown-select,
+.box-search-advance .item-search #guest-dropdown,
+.box-search-advance .item-search .react-datepicker-wrapper input {
+  min-height: 28px;
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .dropdown-menu {
+    min-width: 250px !important;
+  }
+
+  .guest-dropdown-item {
+    padding: 12px 10px !important;
+  }
 }

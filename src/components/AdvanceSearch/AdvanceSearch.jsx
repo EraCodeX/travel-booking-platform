@@ -81,12 +81,13 @@ const AdvanceSearch = () => {
                       onClick={() => handleServiceChange(service)}
                     >
                       <i
-                        className={`bi bi-${service === "flights"
-                          ? "airplane-engines"
-                          : service === "hotels"
-                            ? "house-door"
-                            : "car-front"
-                          } me-2`}
+                        className={`bi bi-${
+                          service === "flights"
+                            ? "airplane-engines"
+                            : service === "hotels"
+                              ? "house-door"
+                              : "car-front"
+                        } me-2`}
                       ></i>
                       {service.charAt(0).toUpperCase() + service.slice(1)}
                     </Button>
@@ -124,10 +125,11 @@ const AdvanceSearch = () => {
               <Col md={12} xs={12}>
                 <div className="box-search shadow-sm">
                   <div className="item-search item-search-2 ">
-                    <label className="item-search-label" id="form-check-input">Origin</label>
+                    <label className="item-search-label" id="form-check-input">
+                      Origin
+                    </label>
                     <CustomDropdown
                       onSelect={(val) => setPickUpLocation(val)}
-
                     />
                   </div>
                   <div className="item-search item-search-2">
@@ -232,6 +234,7 @@ const AdvanceSearch = () => {
               </div>
             </Col>
           )}
+          {/*  Cars */}
           {selectedService === "cars" && (
             <Col md={12} xs={12}>
               <div className="box-search shadow-sm p-4 rounded m-2">
@@ -341,26 +344,26 @@ const AdvanceSearch = () => {
 
                       const flightNumber = `${departureSegment.carrierCode} ${departureSegment.number}`;
                       const departureTime = new Date(
-                        departureSegment.departure.at
+                        departureSegment.departure.at,
                       ).toLocaleString();
                       const arrivalTime = new Date(
-                        departureSegment.arrival.at
+                        departureSegment.arrival.at,
                       ).toLocaleString();
                       const from = departureSegment.departure.iataCode;
                       const to = departureSegment.arrival.iataCode;
 
                       const returnInfo = returnSegment
                         ? {
-                          flightNumber: `${returnSegment.carrierCode} ${returnSegment.number}`,
-                          departureTime: new Date(
-                            returnSegment.departure.at
-                          ).toLocaleString(),
-                          arrivalTime: new Date(
-                            returnSegment.arrival.at
-                          ).toLocaleString(),
-                          from: returnSegment.departure.iataCode,
-                          to: returnSegment.arrival.iataCode,
-                        }
+                            flightNumber: `${returnSegment.carrierCode} ${returnSegment.number}`,
+                            departureTime: new Date(
+                              returnSegment.departure.at,
+                            ).toLocaleString(),
+                            arrivalTime: new Date(
+                              returnSegment.arrival.at,
+                            ).toLocaleString(),
+                            from: returnSegment.departure.iataCode,
+                            to: returnSegment.arrival.iataCode,
+                          }
                         : null;
 
                       const totalPrice = (

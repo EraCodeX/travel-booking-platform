@@ -1,4 +1,5 @@
 # 🌍 EraTravel
+
 <div align="center">
   <strong>Responsive Travel Booking Platform</strong>
   <br><br>
@@ -12,6 +13,7 @@
 ---
 
 ## 🚀 Overview
+
 <div>
 EraTravel is a <strong>modern, responsive travel booking platform</strong> built with <strong>React</strong>.  
 Users can explore destinations, book flights, and enjoy interactive galleries.  
@@ -21,6 +23,7 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 ---
 
 ## 🛠 Technologies & Tools
+
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">React</div>
   <div style="background:#e0e7ff; color:#1e3a8a; padding:5px 10px; border-radius:6px;">Bootstrap 5</div>
@@ -71,7 +74,6 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 
 </div>
 
-
 ---
 
 <h2>🖼 Screenshots</h2>
@@ -80,25 +82,25 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 
   <!-- Row 1: 2 images -->
   <figure style="flex: 0 0 48%; text-align: center;">
-    <img src="assets/homepage.png" alt="Homepage"
+    <img src="assets/image1.png" alt="Image"
          style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
   </figure>
 
   <figure style="flex: 0 0 48%; text-align: center;">
-    <img src="assets/destinations.png" alt="Comments Section"
+    <img src="assets/image2.png" alt="Image2"
          style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
   </figure>
 
   <!-- Row 2: 1 image -->
   <figure style="flex: 0 0 100%; text-align: center; margin-top: 1rem;">
-    <img src="assets/mobile-view.png" alt="Tests Section"
+    <img src="assets/mobile-view.png" alt="Image3"
          style="width:250px; height:200px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.15); object-fit: cover;" />
   </figure>
 
-</div>
----
+## </div>
 
 ## 🗂 Project Structure
+
 <pre>
 🌍 eratravel/
 │
@@ -124,6 +126,7 @@ The app emphasizes <strong>performance, accessibility, and enterprise-level desi
 ---
 
 ## ⚡ Getting Started
+
 ```
 git clone https://github.com/EraCodeX/travel-booking-platform.git
 cd travel-booking-platform
@@ -133,3 +136,4 @@ npm start
 
 👩‍💻 Author
 Era Hidaj – Frontend Engineer
+```
