@@ -1,187 +1,681 @@
-/* Advanced Search */
-.box-search-advance .box-search {
-    border: 1px solid var(--bgClr);
-    border-radius: 15px;
-    background-color: var(--white);
-    padding: 20px;
-    position: relative;
-    top: -70px;
-    z-index: 12;
-    margin-bottom: -50px;
-    display: flex;
-    align-items: flex-end;
+/* =========================
+SEARCH 
+   ========================= */
 
+.box-search-advance {
+  position: relative;
+  z-index: 20;
+}
+
+.box-search-advance .box-search {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #fcfcfd 100%);
+  padding: 22px 18px;
+  position: relative;
+  top: -70px;
+  z-index: 12;
+  margin-bottom: -46px;
+  display: flex;
+  align-items: stretch;
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.05),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
+}
+
+.box-search-advance .box-search:hover {
+  box-shadow:
+    0 16px 40px rgba(15, 23, 42, 0.07),
+    0 6px 18px rgba(15, 23, 42, 0.05);
 }
 
 .box-search-advance .box-search .item-search {
-    width: 20%;
-    position: relative;
-    padding: 0px 12px;
+  width: 20%;
+  position: relative;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 82px;
 }
 
 .box-search-advance .box-search .item-search::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    right: 10px;
-    width: 1px;
-    height: 58px;
-    background-color: #e4e6e8;
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 1px;
+  height: 58px;
+  background: linear-gradient(
+    to bottom,
+    rgba(148, 163, 184, 0),
+    rgba(148, 163, 184, 0.45),
+    rgba(148, 163, 184, 0)
+  );
 }
 
 .box-search-advance .box-search .item-search-2 {
-    display: inline-block;
-
-}
-
-.box-search-advance .box-search .item-search-2 .react-datepicker__input-container {
-    font-family: bootstrap-icons !important;
-    font-style: normal;
-    font-weight: 400 !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-}
-
-.box-search-advance .box-search .item-search-2 .react-datepicker-wrapper {
-    display: block;
-}
-
-.box-search-advance .box-search .item-search-2 .react-datepicker__input-container::before {
-    content: "\f214";
-    position: absolute;
-    left: 0;
-    bottom: 8px;
-    font-size: var(--bodyText);
-}
-
-
-.box-search-advance .box-search .item-search-2 .react-datepicker__input-container::after {
-    content: "\f282";
-    position: absolute;
-    right: 20px;
-    bottom: 8px;
-    font-size: var(--bodyText);
-}
-
-.box-search-advance .box-search .item-search-2 .react-datepicker-wrapper input {
-    border: none;
-    padding: 5px 40px 5px 5px;
-    padding-left: 22px !important;
-    line-height: 1.5;
-    width: 100%;
-    font-size: var(--bodyText);
-    font-weight: bold;
-    color: var(--textClr);
-    font-family: "Poppins", sans-serif;
-}
-
-.box-search-advance .box-search .item-search-2 .react-datepicker-wrapper input:focus {
-    border: none;
-    outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box-search-advance .box-search .item-search .item-search-label {
-    font-size: var(--bodyText);
-    line-height: 22px;
-    color: var(--textClr);
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #64748b;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  min-height: 16px;
 }
 
-.box-search-advance .box-search .bd-none::before {
-    display: none;
+/* Datepicker */
+.box-search-advance
+  .box-search
+  .item-search-2
+  .react-datepicker__input-container {
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
 }
 
+.box-search-advance .box-search .item-search-2 .react-datepicker-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.box-search-advance
+  .box-search
+  .item-search-2
+  .react-datepicker__input-container::before {
+  content: "\f214";
+  position: absolute;
+  left: 0;
+  bottom: 9px;
+  font-size: 15px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.box-search-advance
+  .box-search
+  .item-search-2
+  .react-datepicker__input-container::after {
+  content: "\f282";
+  position: absolute;
+  right: 4px;
+  bottom: 9px;
+  font-size: 12px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.box-search-advance .box-search .item-search-2 .react-datepicker-wrapper input {
+  border: none;
+  padding: 4px 26px 4px 28px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 700;
+  color: #0f172a;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  border-radius: 12px;
+  outline: none;
+  box-shadow: none;
+}
+
+.box-search-advance
+  .box-search
+  .item-search-2
+  .react-datepicker-wrapper
+  input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Standard form controls */
+.box-search-advance .box-search .form-control {
+  border: none;
+  background: transparent;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0;
+  min-height: auto;
+  box-shadow: none !important;
+}
+
+.box-search-advance .box-search .form-control:focus {
+  box-shadow: none !important;
+  border: none;
+  outline: none;
+}
+
+.box-search-advance .box-search .form-control::placeholder {
+  color: #98a2b3;
+  font-weight: 500;
+}
+
+/* Search service toggle */
+.box-search-advance .search-type-toggle {
+  gap: 10px;
+}
+
+.box-search-advance .search-type-toggle .btn {
+  min-height: 56px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  transition: all 0.28s ease;
+  box-shadow: none;
+}
+
+.box-search-advance .search-type-toggle .btn-outline-secondary {
+  color: #334155;
+  background: #fff;
+}
+
+.box-search-advance .search-type-toggle .btn-outline-secondary:hover {
+  background: #f8fafc;
+  border-color: rgba(59, 130, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+.box-search-advance .search-type-toggle .btn-secondary {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+}
+
+.box-search-advance .search-type-toggle .btn-secondary:hover {
+  transform: translateY(-1px);
+}
+
+/* Radio pills */
+.box-search-advance .form-check-label {
+  background: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.box-search-advance .form-check-label:hover {
+  background: #eef2ff;
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.box-search-advance .form-check-input {
+  accent-color: #111827;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+/* Search button */
 .box-search-advance .box-search .item-search .primaryBtn {
-    padding: 15px 32px !important;
-    font-size: 16px;
-    line-height: 26px !important;
-    align-items: center;
-    width: fit-content;
-    display: flex;
-    border: none;
-    font-weight: bold;
+  min-height: 58px;
+  padding: 15px 26px !important;
+  font-size: 16px;
+  line-height: 1 !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  display: inline-flex;
+  border: none;
+  border-radius: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ef2d2d 0%, #c81e1e 100%);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(239, 45, 45, 0.22);
+  transition: all 0.3s ease;
 }
 
 .box-search-advance .box-search .item-search .primaryBtn:hover {
-    background-color: var(--primaryClr);
+  background: linear-gradient(135deg, #ff3b3b 0%, #bb1616 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(239, 45, 45, 0.28);
 }
 
+.box-search-advance .box-search .bd-none::before {
+  display: none;
+}
+
+/* Spinner */
 .spinner-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
 .spinner-overlay .spinner-border {
-    width: 4rem;
-    height: 4rem;
-    border-width: 0.4rem;
-    color: rgb(161, 11, 11);
+  width: 4rem;
+  height: 4rem;
+  border-width: 0.35rem;
+  color: rgb(161, 11, 11);
 }
 
+/* =========================
+   RESULTS SECTION - PREMIUM
+   ========================= */
+
+.search-results {
+  margin-top: 4px;
+}
+
+.search-results h4 {
+  font-size: clamp(1.8rem, 1.65rem + 0.4vw, 2.2rem);
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.04em;
+  margin-bottom: 26px !important;
+}
+
+.bg-light.p-4.rounded.shadow {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(59, 130, 246, 0.05) 0%,
+      transparent 18%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(239, 68, 68, 0.04) 0%,
+      transparent 20%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow:
+    0 16px 38px rgba(15, 23, 42, 0.06),
+    0 6px 14px rgba(15, 23, 42, 0.03) !important;
+  padding: 32px !important;
+}
+
+/* Results scroll wrapper */
 .result-list {
-    max-height: 400px;
-    overflow-y: auto;
-    position: relative;
+  max-height: 560px;
+  overflow-y: auto;
+  position: relative;
+  padding-right: 8px;
+  scroll-behavior: smooth;
 }
 
-@media (max-width : 1199px) {
-    .box-search-advance .box-search {
-        flex-wrap: wrap;
-
-    }
-
-    .box-search-advance .box-search .item-search:last-child {
-        width: 100%;
-        justify-content: center !important;
-        padding: 20px;
-    }
-
-    .box-search-advance .box-search .item-search:last-child .primaryBtn {
-        width: 100%;
-        justify-content: center !important;
-    }
-
-    .box-search-advance .box-search .item-search {
-        width: 25%;
-    }
+.result-list::-webkit-scrollbar {
+  width: 9px;
 }
 
-
-@media (max-width : 991px) {
-    .box-search-advance .box-search .item-search {
-        width: 50%;
-        position: relative;
-        padding: 0px 27px;
-        margin-bottom: 15px;
-
-    }
-
-    .box-search-advance .box-search .item-search:nth-child(2)::before {
-        display: none;
-    }
+.result-list::-webkit-scrollbar-track {
+  background: #eef2f7;
+  border-radius: 999px;
 }
 
-@media (max-width : 575px) {
-    .box-search-advance .box-search .item-search {
-        width: 100%;
-        border-bottom: 1px solid var(--bs-border-color);
-        padding: 10px;
+.result-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 999px;
+  border: 2px solid #eef2f7;
+}
 
+.result-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #94a3b8 0%, #64748b 100%);
+}
 
-    }
+/* Flight result card */
+.result-list .border.p-3.mb-3.rounded.shadow-sm.bg-white {
+  position: relative;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  border-radius: 24px !important;
+  padding: 28px 26px !important;
+  margin-bottom: 18px !important;
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.04),
+    0 3px 8px rgba(15, 23, 42, 0.03) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+  overflow: hidden;
+}
 
-    .box-search-advance .box-search .item-search::before {
-        display: none;
-    }
+.result-list .border.p-3.mb-3.rounded.shadow-sm.bg-white::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, #ef4444 0%, #fb7185 100%);
+  opacity: 0.9;
+}
+
+.result-list .border.p-3.mb-3.rounded.shadow-sm.bg-white:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.12) !important;
+  box-shadow:
+    0 18px 34px rgba(15, 23, 42, 0.07),
+    0 8px 18px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Main route title */
+.result-list h5,
+.result-list h6 {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px !important;
+}
+
+.result-list h5 {
+  font-size: 1.35rem;
+}
+
+.result-list h6 {
+  font-size: 1.08rem;
+}
+
+/* Generic result text */
+.result-list strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.result-list .text-muted,
+.result-list .small {
+  color: #64748b !important;
+}
+
+/* Top departure/arrival row */
+.result-list .d-flex.justify-content-between {
+  gap: 24px;
+  align-items: center;
+}
+
+.result-list .d-flex.justify-content-between > div {
+  flex: 1;
+  font-size: 0.98rem;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.result-list .d-flex.justify-content-between > div:last-child {
+  text-align: right;
+}
+
+/* Flight code row */
+.result-list .mt-2.text-muted.small,
+.result-list .mt-2.text-secondary.small {
+  margin-top: 14px !important;
+  font-size: 0.92rem !important;
+  color: #64748b !important;
+}
+
+/* Return section */
+.result-list .border-top {
+  border-top: 1px dashed rgba(148, 163, 184, 0.32) !important;
+  margin-top: 22px !important;
+  padding-top: 22px !important;
+}
+
+.result-list .mt-4.p-3.border-top {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  background: transparent !important;
+}
+
+/* "Return Flight" text */
+.result-list .my-2.py-2 {
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8 !important;
+}
+
+/* Price badge */
+.result-list .text-danger {
+  color: #b91c1c !important;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-top: 22px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.08) 0%,
+    rgba(251, 113, 133, 0.08) 100%
+  );
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(239, 68, 68, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Empty state */
+.search-results .text-center.text-muted {
+  padding: 44px 20px;
+  font-size: 1rem;
+  color: #64748b !important;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1199px) {
+  .box-search-advance .box-search {
+    flex-wrap: wrap;
+    padding: 20px 16px;
+  }
+
+  .box-search-advance .box-search .item-search {
+    width: 25%;
+    margin-bottom: 14px;
+  }
+
+  .box-search-advance .box-search .item-search:last-child {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .box-search-advance .box-search .item-search:last-child .primaryBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .box-search-advance .box-search {
+    top: -44px;
+  }
+
+  .box-search-advance .box-search .item-search {
+    width: 50%;
+    padding: 0 14px;
+    margin-bottom: 16px;
+    min-height: auto;
+  }
+
+  .box-search-advance .box-search .item-search::before {
+    display: none;
+  }
+
+  .bg-light.p-4.rounded.shadow {
+    padding: 24px !important;
+    border-radius: 24px !important;
+  }
+
+  .search-results h4 {
+    margin-bottom: 20px !important;
+  }
+
+  .result-list .border.p-3.mb-3.rounded.shadow-sm.bg-white {
+    padding: 22px 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .result-list h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .box-search-advance .box-search {
+    padding: 18px 14px;
+    border-radius: 20px;
+    top: -24px;
+    margin-bottom: -20px;
+  }
+
+  .box-search-advance .box-search .item-search {
+    width: 100%;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+    padding: 12px 6px 14px;
+    margin-bottom: 0;
+  }
+
+  .box-search-advance .box-search .item-search:last-child {
+    border-bottom: none;
+    padding-top: 18px;
+  }
+
+  .box-search-advance .box-search .item-search::before {
+    display: none;
+  }
+
+  .box-search-advance .search-type-toggle .btn {
+    min-height: 52px;
+    font-size: 14px;
+    border-radius: 14px;
+  }
+
+  .box-search-advance .form-check-label {
+    font-size: 14px;
+    padding: 9px 14px;
+  }
+
+  .bg-light.p-4.rounded.shadow {
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .search-results h4 {
+    font-size: 1.45rem;
+  }
+
+  .result-list {
+    max-height: 500px;
+    padding-right: 4px;
+  }
+
+  .result-list .border.p-3.mb-3.rounded.shadow-sm.bg-white {
+    padding: 18px 16px !important;
+    border-radius: 18px !important;
+  }
+
+  .result-list .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .result-list .d-flex.justify-content-between > div:last-child {
+    text-align: left;
+  }
+
+  .result-list h5 {
+    font-size: 1.08rem;
+  }
+
+  .result-list h6 {
+    font-size: 1rem;
+  }
+
+  .result-list .text-danger {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Cars search bar - more breathing room */
+.box-search-advance .box-search .form-control {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.box-search-advance .box-search .item-search input[type="time"] {
+  border: none;
+  background: transparent;
+  padding: 4px 26px 4px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+}
+
+.box-search-advance .box-search .item-search input[type="number"] {
+  border: none;
+  background: transparent;
+  padding: 4px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+}
+
+/* Make cars row feel less cramped */
+.box-search-advance .box-search .item-search {
+  min-width: 0;
+}
+
+.box-search-advance .box-search .item-search .form-control::placeholder {
+  color: #98a2b3;
+  font-weight: 500;
+}
+
+/* Better spacing for date/time/location in cars */
+.box-search-advance .box-search .item-search {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Long labels */
+.box-search-advance .box-search .item-search-label {
+  font-size: 12px;
+  line-height: 16px;
+  min-height: 32px;
+}
+
+/* Slightly smaller text only when too many fields exist visually */
+@media (min-width: 992px) {
+  .box-search-advance .box-search .item-search input[type="time"],
+  .box-search-advance .box-search .item-search input[type="number"],
+  .box-search-advance .box-search .item-search .react-datepicker-wrapper input,
+  .box-search-advance .box-search .item-search .form-control {
+    font-size: 14px;
+  }
 }

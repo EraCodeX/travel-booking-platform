@@ -6,8 +6,8 @@ import { Dropdown, DropdownButton, ButtonGroup, Button } from "react-bootstrap";
 
 const CustomDropdown = ({ label, onSelect }) => {
   const [guests, setGuests] = useState({ adults: 1, children: 0, infants: 0 });
-  const [accessToken, setAccessToken] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const totalGuests = guests.adults + guests.children + guests.infants;
 
   const handleChange = (type, increment) => {
     setGuests((prev) => {
@@ -20,101 +20,65 @@ const CustomDropdown = ({ label, onSelect }) => {
   };
 
   useEffect(() => {
-    if (label === "Guests") {
-      const totalGuests = guests.adults + guests.children + guests.infants;
-      if (onSelect) onSelect(totalGuests);
+    if (label === "Guests" && onSelect) {
+      onSelect(totalGuests);
     }
-  }, [guests, onSelect, label]);
-
-  const getAccessToken = async () => {
-    try {
-      const response = await axios.post(
-        "https://test.api.amadeus.com/v1/security/oauth2/token",
-        new URLSearchParams({
-          grant_type: "client_credentials",
-          client_id: "3KXAm1KA2THO95bCcNGM2MnxByAyLW1B",
-          client_secret: "YuV1QgyFkGfliWmb",
-        }),
-
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
-      const token = response.data.access_token;
-      setAccessToken(token);
-      return token;
-    } catch (error) {
-      console.error("Error fetching access token:", error);
-      return null;
-    }
-  };
+  }, [totalGuests, onSelect, label]);
 
   const loadCityOptions = async (inputValue) => {
     if (!inputValue) return [];
 
-    const token = accessToken || (await getAccessToken());
-    if (!token) return [];
-
     try {
       const response = await axios.get(
-        "https://test.api.amadeus.com/v1/reference-data/locations",
-        {
-          params: {
-            keyword: inputValue,
-            subType: "CITY",
-          },
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
+        `https://eratravel.site/backend/flights.php?keyword=${encodeURIComponent(inputValue)}`,
       );
 
-      return response.data.data.map((item) => ({
+      return (response.data.data || []).map((item) => ({
         label: `${item.address.cityName}, ${item.address.countryName}`,
         value: item.iataCode,
       }));
     } catch (error) {
-      if (error.response?.status === 429) {
-        console.error("Too many requests. Please wait a while and try again.");
-      } else {
-        console.error("Error loading cities:", error);
-      }
+      console.error("Error loading cities:", error);
       return [];
     }
   };
 
   return (
     <>
-      <label className="item-search-label">{label}</label>
+      {label && <label className="item-search-label">{label}</label>}
+
       {label === "Guests" ? (
         <DropdownButton
           as={ButtonGroup}
-          title={`${guests.adults}Adults, ${guests.children}Children, ${guests.infants}Infants`}
+          title={totalGuests === 1 ? "1 Traveler" : `${totalGuests} Travelers`}
           variant="white"
           id="guest-dropdown"
-          style={{ width: "100%" }}
+          className="guest-dropdown-button"
         >
           {["adults", "children", "infants"].map((type) => (
-            <Dropdown.Item
-              as="div"
-              key={type}
-              className="d-flex justify-content-between align-items-center py-2 px-3"
-            >
-              <span className="text-capitalize">{type}</span>
-              <div>
+            <Dropdown.Item as="div" key={type} className="guest-dropdown-item">
+              <div className="guest-type-wrap">
+                <span className="guest-type-label">
+                  {type.charAt(0).toUpperCase() + type.slice(1)}
+                </span>
+              </div>
+
+              <div className="guest-counter-controls">
                 <Button
                   variant="outline-danger"
                   size="sm"
+                  className="guest-counter-btn"
                   onClick={() => handleChange(type, false)}
                 >
                   -
                 </Button>
-                <span className="mx-2">{guests[type]}</span>
+
+                <span className="guest-counter-value">{guests[type]}</span>
+
                 <Button
                   variant="outline-danger"
                   size="sm"
+                  className="guest-counter-btn"
                   onClick={() => handleChange(type, true)}
                 >
                   +
@@ -123,7 +87,6 @@ const CustomDropdown = ({ label, onSelect }) => {
             </Dropdown.Item>
           ))}
         </DropdownButton>
-
       ) : (
         <AsyncSelect
           cacheOptions
@@ -141,6 +104,7 @@ const CustomDropdown = ({ label, onSelect }) => {
           }}
           placeholder="Search..."
           className="city-dropdown-select"
+          classNamePrefix="city-select"
           styles={{
             control: (provided) => ({
               ...provided,
@@ -148,7 +112,7 @@ const CustomDropdown = ({ label, onSelect }) => {
               boxShadow: "none",
               backgroundColor: "transparent",
               padding: "0",
-              minHeight: "auto",
+              minHeight: "unset",
               cursor: "text",
             }),
             dropdownIndicator: () => ({
@@ -165,14 +129,40 @@ const CustomDropdown = ({ label, onSelect }) => {
               ...provided,
               margin: "0",
               padding: "0",
+              color: "#0f172a",
+              fontWeight: 600,
             }),
             singleValue: (provided) => ({
               ...provided,
-              color: "#000",
+              color: "#0f172a",
+              fontWeight: 600,
             }),
             placeholder: (provided) => ({
               ...provided,
-              color: "#aaa",
+              color: "#98a2b3",
+              fontWeight: 500,
+            }),
+            menu: (provided) => ({
+              ...provided,
+              zIndex: 9999,
+              borderRadius: "18px",
+              overflow: "hidden",
+              boxShadow: "0 20px 45px rgba(15, 23, 42, 0.16)",
+              border: "1px solid rgba(15, 23, 42, 0.08)",
+            }),
+            menuList: (provided) => ({
+              ...provided,
+              padding: "8px",
+            }),
+            option: (provided, state) => ({
+              ...provided,
+              borderRadius: "12px",
+              padding: "12px 14px",
+              fontSize: "14px",
+              fontWeight: 600,
+              backgroundColor: state.isFocused ? "#f8fafc" : "#ffffff",
+              color: "#0f172a",
+              cursor: "pointer",
             }),
           }}
         />
