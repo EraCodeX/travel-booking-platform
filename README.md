@@ -69,17 +69,17 @@ The project focuses on:
 <tr>
 <td align="center">
 <b>Desktop</b><br/><br/>
-<img src="assets/booking-search-desktop.png" width="320" height="200"/>
+<img src="assets/booking-search-desktop.png" width="300"/>
 </td>
 
 <td align="center">
 <b>Form UI</b><br/><br/>
-<img src="assets/booking-search-form-ui.png" width="320" height="200"/>
+<img src="assets/booking-search-form-ui.png" width="300"/>
 </td>
 
 <td align="center">
 <b>Mobile</b><br/><br/>
-<img src="assets/booking-search-mobile.png" width="320" height="200"/>
+<img src="assets/booking-search-mobile.png" width="170"/>
 </td>
 </tr>
 </table>
