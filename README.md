@@ -68,18 +68,43 @@ The project focuses on:
 <table>
 <tr>
 <td align="center">
-<b>Desktop</b><br/><br/>
-<img src="assets/booking-search-desktop.png" width="300"/>
+<img src="assets/homepage-hero.png" width="450"/>
+<br/><br/>
+<b>Homepage & Hero Section</b>
 </td>
 
 <td align="center">
-<b>Form UI</b><br/><br/>
-<img src="assets/booking-search-form-ui.png" width="300"/>
+<img src="assets/booking-form-empty.png" width="450"/>
+<br/><br/>
+<b>Flight Booking Form (Empty State)</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="assets/booking-form-filled.png" width="450"/>
+<br/><br/>
+<b>Flight Booking Form (Filled State)</b>
 </td>
 
 <td align="center">
-<b>Mobile</b><br/><br/>
-<img src="assets/booking-search-mobile.png" width="170"/>
+<img src="assets/flight-results.png" width="450"/>
+<br/><br/>
+<b>Real-Time Flight Search Results</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="assets/signin-modal.png" width="450"/>
+<br/><br/>
+<b>User Authentication Modal</b>
+</td>
+
+<td align="center">
+<img src="assets/destination-cards.png" width="450"/>
+<br/><br/>
+<b>Interactive Destination Packages</b>
 </td>
 </tr>
 </table>
