@@ -134,8 +134,8 @@ travel-booking-platform/
 ## Getting Started
 
 ```bash
-git clone https://github.com/EraCodeX/travel-booking-platform.git
-cd travel-booking-platform
+git clone https://github.com/erahidaj/travel-booking.git
+cd travel-booking
 npm install
 npm start
 ```
